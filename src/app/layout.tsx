@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
 import screenshot from "./Images/Screenshot 2025-05-31 at 11.45.46 AM.png";
-import { FaRegUser,  } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
 
@@ -38,7 +38,7 @@ export default function RootLayout({
             </ul>
             <div className="flex items-center gap-4">
               <FiSearch />
-              
+
               <FaRegUser />
               <HiOutlineShoppingBag />
             </div>
@@ -47,8 +47,39 @@ export default function RootLayout({
 
         <main className="flex-grow">{children}</main>
 
-        <footer className="bg-gray-500 p-3 flex items-center justify-center">
-          <p>Footer</p>
+        <footer className=" flex w-full gap-12 mt-32 flex-col">
+         <div className="flex">
+         <div className=" w-5/6 ">
+            <Image src={screenshot} alt="Screenshot" width={100} height={100} />
+            <p className="mt-4 w-1/2 text-sm text-[#6C737F] text-bold">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div className=" w-54 text-[#6C737F]">
+            <h1 className="text-black font-medium text-xl">COMPANY</h1>
+            <ul className="text-sm mt-8">
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Delivery</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          <div className=" w-54 text-[#6C737F]">
+            <h1 className="text-black font-medium text-xl">GET IN TOUCH</h1>
+            <ul className="text-sm mt-8">
+              <li>+1-000-000-0000</li>
+              <li>eazydevdev@gmail.com</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+         </div>
+
+          <div className="flex items-center justify-center mb-4  border-t border-[#E5E7EB]">
+            <p className="mt-4 text-sm">Copyright 2024@ greatstack.dev - All Right Reserved.</p>
+          </div>
         </footer>
       </body>
     </html>
