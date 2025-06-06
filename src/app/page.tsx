@@ -2,7 +2,8 @@
 export default function TopBar() {
   return (
     <>
-      <div className=" mt-7 flex border border-[#9CA3AF] ">
+      {/* <div>
+  <div className=" mt-7 flex border border-[#9CA3AF] ">
         <div className=" w-1/2 flex items-center justify-center text-[#414141]">
           <div className="flex flex-col">
             <div className="flex items-center  gap-2">
@@ -253,6 +254,56 @@ export default function TopBar() {
           <button className="bg-black text-white text-xs p-4 w-36">
             SUBSCRIBE
           </button>
+        </div>
+      </div>
+  </div> */}
+
+      <div className="flex gap-10  border-t border-[#E5E7EB] ">
+        <div className="w-[25%]  h-96 mt-14">
+          <p>FILTERS</p>
+          <div className="  mt-6 p-5 border border-[#D1D5DB]">
+            <p className="text-sm font-semibold mb-3">CATEGORIES</p>
+            <ul>
+              <li className="mb-2 text-[#374051] text-sm  font-extralight">
+                <input type="checkbox" />
+                <label> Men</label>
+              </li>
+              <li className="mb-2 text-[#374051] text-sm ">
+                <input type="checkbox" />
+                <label> Women</label>
+              </li>
+              <li className="mb-2 text-[#374051] text-sm ">
+                <input type="checkbox" />
+                <label> Kids</label>
+              </li>
+            </ul>
+          </div>
+          <div className="  mt-6 p-5 border border-[#D1D5DB]">
+            <p className="text-sm font-semibold mb-3">TYPE</p>
+            <ul>
+              <li className="mb-2 text-[#374051] text-sm  font-extralight">
+                <input type="checkbox" />
+                <label> Topwear</label>
+              </li>
+              <li className="mb-2 text-[#374051] text-sm ">
+                <input type="checkbox" />
+                <label> Bottomwear</label>
+              </li>
+              <li className="mb-2 text-[#374051] text-sm ">
+                <input type="checkbox" />
+                <label> Winterwear</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="w-[75%]  h-96 mt-14">
+        <div className="flex gap-3 items-center">
+          <p className="text-2xl text-[#6B7280]">
+            ALL{" "}
+            <span className="text-[#374051] font-medium">COLLECTIONS</span>
+          </p>
+          <p className="w-12 h-[2px] bg-[#414141]"></p>
+        </div>
         </div>
       </div>
     </>

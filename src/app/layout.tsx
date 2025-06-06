@@ -5,6 +5,7 @@ import screenshot from "./Images/Screenshot 2025-05-31 at 11.45.46 AM.png";
 import { FaRegUser } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -15,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col h-screen py-5 px-28">
         <div className="">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mb-6">
             <div>
               <Image
                 src={screenshot}
@@ -26,7 +27,8 @@ export default function RootLayout({
             </div>
             <ul className="flex gap-5 items-center justify-center text-sm ">
               <li>HOME</li>
-              <li>COLLECTION</li>
+              
+              <li className=""><Link href="/collection">COLLECTION</Link></li>
               <li>ABOUT</li>
               <li>CONTACT</li>
               <li>
