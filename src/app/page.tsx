@@ -827,16 +827,38 @@ export default function TopBar() {
         <p className="w-12 h-[2px] bg-[#414141] mt-8"></p>
       </div>
 
-      <div className="bg-gray-400 h-96 flex">
-        <div className="w-1/2 h-full bg-red-500">
+      <div className="  flex mt-10">
+        <div className="w-1/2 h-full ">
           <img
             src="https://foreverbuy.in/assets/about_img-BAJyTXw9.png"
             alt="About"
-            className="w-full h-full object-cover"
+            className="w-[80%] h-full object-cover"
           />
         </div>
 
-        <div className="w-1/2 h-full bg-blue-500"></div>
+        <div className="w-1/2 h-full mt-12 text-[#4B5563]">
+          <p>
+            Forever was born out of a passion for innovation and a desire to
+            revolutionize the way people shop online. Our journey began with a
+            simple idea: to provide a platform where customers can easily
+            discover, explore, and purchase a wide range of products from the
+            comfort of their homes.
+          </p>
+          <p className="mt-6">
+            Since our inception, we've worked tirelessly to curate a diverse
+            selection of high-quality products that cater to every taste and
+            preference. From fashion and beauty to electronics and home
+            essentials, we offer an extensive collection sourced from trusted
+            brands and suppliers.
+          </p>
+          <p className="mt-6 font-bold">Our Mission</p>
+          <p className="mt-6">
+            Our mission at Forever is to empower customers with choice,
+            convenience, and confidence. We're dedicated to providing a seamless
+            shopping experience that exceeds expectations, from browsing and
+            ordering to delivery and beyond.
+          </p>
+        </div>
       </div>
     </>
   );
