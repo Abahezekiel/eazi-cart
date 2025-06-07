@@ -860,6 +860,13 @@ export default function TopBar() {
           </p>
         </div>
       </div>
+
+      <div className="flex gap-3 items-center  ">
+        <p className="text-2xl text-[#6B7280] mt-8">
+          WHY <span className="text-[#374051] font-medium">CHOOSE US</span>
+        </p>
+        <p className="w-12 h-[2px] bg-[#414141] mt-8"></p>
+      </div>
     </>
   );
 }
