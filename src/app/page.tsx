@@ -827,8 +827,16 @@ export default function TopBar() {
         <p className="w-12 h-[2px] bg-[#414141] mt-8"></p>
       </div>
 
-      <div className="bg-[gray] h-96 flex">
-      <div className="bg-[gray] h-96 flex"></div>
+      <div className="bg-gray-400 h-96 flex">
+        <div className="w-1/2 h-full bg-red-500">
+          <img
+            src="https://foreverbuy.in/assets/about_img-BAJyTXw9.png"
+            alt="About"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="w-1/2 h-full bg-blue-500"></div>
       </div>
     </>
   );
