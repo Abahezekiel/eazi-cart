@@ -2,6 +2,7 @@
 export default function TopBar() {
   return (
     <>
+      {/* home page */}
       {/* <div>
   <div className=" mt-7 flex border border-[#9CA3AF] ">
         <div className=" w-1/2 flex items-center justify-center text-[#414141]">
@@ -258,7 +259,8 @@ export default function TopBar() {
       </div>
   </div> */}
 
-      <div className="flex gap-10  border-t border-[#E5E7EB] ">
+      {/* collection page */}
+      {/* <div className="flex gap-10  border-t border-[#E5E7EB] ">
         <div className="w-[25%]  h-96 mt-14">
           <p>FILTERS</p>
           <div className="  mt-6 p-5 border border-[#D1D5DB]">
@@ -815,6 +817,18 @@ export default function TopBar() {
             </div>
           </div>
         </div>
+      </div> */}
+
+      {/* about page */}
+      <div className="flex gap-3 items-center justify-center border-t border-[#E5E7EB] ">
+        <p className="text-2xl text-[#6B7280] mt-8">
+          ABOUT <span className="text-[#374051] font-medium">US</span>
+        </p>
+        <p className="w-12 h-[2px] bg-[#414141] mt-8"></p>
+      </div>
+
+      <div className="bg-[gray] h-96 flex">
+      <div className="bg-[gray] h-96 flex"></div>
       </div>
     </>
   );
