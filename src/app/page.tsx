@@ -257,7 +257,7 @@ export default function TopBar() {
           </button>
         </div>
       </div>
-  </div> */}
+      </div> */}
 
       {/* collection page */}
       {/* <div className="flex gap-10  border-t border-[#E5E7EB] ">
@@ -921,8 +921,7 @@ export default function TopBar() {
       </div> */}
 
       {/* contact page */}
-
-      <div>
+      {/* <div>
         <div className="flex gap-3 items-center justify-center border-t border-[#E5E7EB] ">
           <p className="text-2xl text-[#6B7280] mt-8">
             CONTACT <span className="text-[#374051] font-medium">US</span>
@@ -948,7 +947,7 @@ export default function TopBar() {
 
             <b className="mt-6 font-bold ">Careers at Forever</b>
             <p className="mt-6">Learn more about our teams and job openings.</p>
-            <button className="mt-6 hover:bg-black hover:text-white px-8 py-3 border border-black ">
+            <button className="mt-6 hover:bg-black hover:text-white px-8 py-3 border border-black transition duration-700 ease-in-out">
               Explore Jobs
             </button>
           </div>
@@ -971,6 +970,88 @@ export default function TopBar() {
               SUBSCRIBE
             </button>
           </div>
+        </div>
+      </div> */}
+
+      {/* Login page*/}
+      {/* <div className=" flex items-center justify-center flex-col ">
+        <div className="flex gap-3 items-center justify-center  ">
+          <p className="text-black  font-serif text-3xl mt-20">Login</p>
+          <p className="w-10 h-[2px] bg-[#414141] mt-20"></p>
+        </div>
+
+        <div className="flex items-center justify-center flex-col">
+          <div>
+            <input
+              placeholder="Email"
+              className="outline-none border border-black w-96 p-2 mt-8"
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Password"
+              className="outline-none border border-black w-96 p-2 mt-4"
+            />
+          </div>
+
+          <div className="flex justify-between w-full mt-2 text-sm">
+            <p>Forgot your password</p>
+            <p>Create account</p>
+          </div>
+          <button className="bg-black text-white  px-7 py-2 mt-6">
+            Sign in
+          </button>
+        </div>
+      </div> */}
+
+      {/* Sign-up page*/}
+      {/* <div className=" flex items-center justify-center flex-col ">
+        <div className="flex gap-3 items-center justify-center  ">
+          <p className="text-black  font-serif text-3xl mt-20">Sign Up</p>
+          <p className="w-10 h-[2px] bg-[#414141] mt-20"></p>
+        </div>
+
+        <div className="flex items-center justify-center flex-col">
+          <div>
+            <input
+              placeholder="Name"
+              className="outline-none border border-black w-96 p-2 mt-8"
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Email"
+              className="outline-none border border-black w-96 p-2 mt-4"
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Password"
+              className="outline-none border border-black w-96 p-2 mt-4"
+            />
+          </div>
+
+          <div className="flex justify-between w-full mt-2 text-sm">
+            <p>Forgot your password</p>
+            <p>  Login Here</p>
+          </div>
+          <button className="bg-black text-white  px-7 py-2 mt-6">
+            Sign Up
+          </button>
+        </div>
+      </div> */}
+
+      {/* cart page */}
+      <div>
+        <div className="flex gap-3 items-center  border-t border-[#E5E7EB] mb-6">
+          <p className="text-2xl text-[#6B7280] mt-18">
+            YOUR <span className="text-[#374051] font-medium">CART</span>
+          </p>
+          <p className="w-12 h-[2px] bg-[#414141] mt-18"></p>
+        </div>
+
+        <div className="border-t border-b border-[#E5E7EB]">
+        
         </div>
       </div>
     </>
