@@ -1042,16 +1042,40 @@ export default function TopBar() {
       </div> */}
 
       {/* cart page */}
-      <div>
-        <div className="flex gap-3 items-center  border-t border-[#E5E7EB] mb-6">
-          <p className="text-2xl text-[#6B7280] mt-18">
+      <div className="border-b border-[#E5E7EB] "></div>
+      <div className="flex gap-6 items-center  mt-18">
+        <div className="   w-[60%]">
+          <div className="text-2xl text-[#6B7280]  flex items-center gap-3">
             YOUR <span className="text-[#374051] font-medium">CART</span>
-          </p>
-          <p className="w-12 h-[2px] bg-[#414141] mt-18"></p>
+            <p className="w-12 h-[2px] bg-[#414141] "></p>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-b border-[#E5E7EB] mt-6"></div>
+
+      <div className="flex gap-6 items-center  mt-2">
+        <div className="   w-[60%]">
+          <div className="text-2xl text-[#6B7280]  flex items-center gap-3">
+           <div>
+            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img47.png" className="w-20" />
+           </div>
+           <div></div>
+          </div>
+        </div>
+        <div className="w-[30%]">
+          <div className="">
+            <input
+              type="number"
+              min="1"
+              value="1"
+              className="border border-[#E5E7EB] outline-none px-1 py-1 w-20"
+            />
+          </div>
         </div>
 
-        <div className="border-t border-b border-[#E5E7EB]">
-        
+        <div className="w-[10%] flex ">
+          <div className="bg-[blue] h-10 w-10"></div>
         </div>
       </div>
     </>
