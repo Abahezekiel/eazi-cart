@@ -1522,7 +1522,7 @@ export default function TopBar() {
       </div> */}
 
       {/* place order page  */}
-      {/* <div>
+      <div>
         <div className="flex gap-3 items-center">
           <p className="text-2xl text-[#6B7280] mt-8">
             DELIVERY{" "}
@@ -1665,7 +1665,7 @@ export default function TopBar() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
