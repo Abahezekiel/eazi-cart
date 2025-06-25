@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const hideNavAndFooter = pathname.startsWith("/admin-panel") || pathname.startsWith("/add-items");
+  const hideNavAndFooter = pathname.startsWith("/admin-login") || pathname.startsWith("/dashboard");
 
 
   // Conditionally apply padding classes
@@ -55,7 +55,7 @@ export default function RootLayout({
                 </li>
                 <li>
                   <a
-                    href="/admin-panel"
+                    href="/admin-login"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
