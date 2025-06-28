@@ -1,10 +1,11 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import LeftAdmin from "../left-admin/page";
 import RightAdmin from "../right-admin/page";
 
-
-
 export default function Dashboard() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <>
       <div>
@@ -20,10 +21,8 @@ export default function Dashboard() {
           </div>
           <p className="border-[#E5E7EB] border-t mt-2"></p>
           <div className="flex w-full bg-[#F9FAFB]   ">
-        
-            <LeftAdmin />
-            <RightAdmin />
-          
+            <LeftAdmin selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
+            <RightAdmin selectedIndex={selectedIndex}/>
           </div>
         </div>
       </div>

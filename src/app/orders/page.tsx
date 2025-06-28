@@ -5,7 +5,7 @@ export default function Orders() {
     <>
       <div className=" bg-[#F9FAFB]  ">
         <div className="flex w-full bg-[#F9FAFB] ">
-          <div className="w-[80%] pl-18 p-8">
+          <div className="w-[97%] pl-18 p-8">
             <p>Order Page</p>
 
             <div className="  mt-4 flex gap-4  border-2 border-[#E5E7EB] w-[100%]  p-8 text-sm">
