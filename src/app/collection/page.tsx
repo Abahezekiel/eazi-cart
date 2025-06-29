@@ -5,9 +5,6 @@ export default function Collection() {
   return (
     <>
       {/* collection page */}
-      <div>
-        <Search />
-      </div>
       <div className="flex gap-10  border-t border-[#E5E7EB] ">
         <div className="w-[25%]  h-96 mt-14">
           <p>FILTERS</p>

@@ -1,53 +1,44 @@
-
-
+// app/layout.tsx or app/root-layout.tsx
 "use client";
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import "./globals.css";
+import Link from "next/link";
 import Image from "next/image";
 import screenshot from "./Images/Screenshot 2025-05-31 at 11.45.46 AM.png";
 import { FaRegUser } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
-import Link from "next/link";
+import "./globals.css";
+import Search from "./search/page";
+// import Search from "./components/Search"; // Move Search component to components
 
 export default function RootLayout({
-  const [showSearch, setShowSearch] = useState(false)
-
   children,
 }: {
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const hideNavAndFooter = pathname.startsWith("/admin-login") || pathname.startsWith("/dashboard");
+  const hideNavAndFooter =
+    pathname.startsWith("/admin-login") || pathname.startsWith("/dashboard");
 
+  const [showSearch, setShowSearch] = useState(false);
 
-  // Conditionally apply padding classes
-  const bodyClassName = `flex flex-col h-screen ${
-    hideNavAndFooter ? "" : "py-5 px-28"
-  }`;
-
-  const toggleSearch = () => {
-    setShowSearch((prevState) => !prevState)
-  }
+  const toggleSearch = () => setShowSearch((prev) => !prev);
 
   return (
     <html lang="en">
-      <body className={bodyClassName}>
+      <body
+        className={`flex flex-col h-screen ${
+          hideNavAndFooter ? "" : "py-5 px-28"
+        }`}
+      >
         {!hideNavAndFooter && (
-          <div className="">
+          <>
             {/* NAVBAR */}
             <div className="flex justify-between items-center mb-6">
-              <div>
-                <Image
-                  src={screenshot}
-                  alt="Screenshot"
-                  width={100}
-                  height={100}
-                />
-              </div>
-              <ul className="flex gap-5 items-center justify-center text-sm ">
+              <Image src={screenshot} alt="Logo" width={100} height={100} />
+              <ul className="flex gap-5 items-center justify-center text-sm">
                 <li>
                   <Link href="/">HOME</Link>
                 </li>
@@ -73,41 +64,45 @@ export default function RootLayout({
                 </li>
               </ul>
               <div className="flex items-center gap-4">
-                <Link href="/collection">
-                <FiSearch className="cursor-pointer" onClick={toggleSearch}/>
-                </Link>
-
+                <FiSearch className="cursor-pointer" onClick={toggleSearch} />
                 <Link href="/login">
-                  <FaRegUser className="cursor-pointer" />
+                  <FaRegUser />
                 </Link>
-
                 <Link href="/cart">
-                  <HiOutlineShoppingBag className="cursor-pointer" />
+                  <HiOutlineShoppingBag />
                 </Link>
               </div>
             </div>
-          </div>
+
+            {showSearch && <Search onClose={toggleSearch} />}
+
+            {/* {pathname === "/collection" && (
+              <FiSearch
+                className="cursor-pointer"
+                onClick={() => setShowSearch(true)} // not toggleSearch
+              />
+            )} */}
+
+            {/* {showSearch && pathname === "/collection" && <Search />} */}
+          </>
         )}
 
         <main className="flex-grow">{children}</main>
 
         {!hideNavAndFooter && (
           <footer className="flex w-full gap-12 mt-32 flex-col">
-            {/* FOOTER CONTENT */}
+            {/* FOOTER */}
             <div className="flex">
               <div className="w-5/6">
                 <Image
                   src={screenshot}
-                  alt="Screenshot"
+                  alt="Footer Logo"
                   width={100}
                   height={100}
                 />
-                <p className="mt-4 w-1/2 text-sm text-[#6C737F] text-bold">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                <p className="mt-4 w-1/2 text-sm text-[#6C737F] font-bold">
+                  Lorem Ipsum is dummy text of the printing and typesetting
+                  industry...
                 </p>
               </div>
               <div className="w-54 text-[#6C737F]">
@@ -128,10 +123,9 @@ export default function RootLayout({
                 </ul>
               </div>
             </div>
-
             <div className="flex items-center justify-center mb-4 border-t border-[#E5E7EB]">
               <p className="mt-4 text-sm">
-                Copyright 2024@ greatstack.dev - All Right Reserved.
+                © 2024 greatstack.dev - All Rights Reserved
               </p>
             </div>
           </footer>
