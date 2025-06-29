@@ -1,16 +1,13 @@
 import { Metadata } from "next";
+import Search from "../search/page";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "collection",
-  },
-  };
-
-
-export default function Collection(){
+export default function Collection() {
   return (
-  <>
+    <>
       {/* collection page */}
+      <div>
+        <Search />
+      </div>
       <div className="flex gap-10  border-t border-[#E5E7EB] ">
         <div className="w-[25%]  h-96 mt-14">
           <p>FILTERS</p>
@@ -569,11 +566,6 @@ export default function Collection(){
           </div>
         </div>
       </div>
-  </>
+    </>
   );
 }
-
-
-
-
-

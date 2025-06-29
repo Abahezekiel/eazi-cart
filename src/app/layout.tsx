@@ -2,6 +2,7 @@
 
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import "./globals.css";
 import Image from "next/image";
@@ -12,6 +13,8 @@ import { FiSearch } from "react-icons/fi";
 import Link from "next/link";
 
 export default function RootLayout({
+  const [showSearch, setShowSearch] = useState(false)
+
   children,
 }: {
   children: React.ReactNode;
@@ -24,6 +27,10 @@ export default function RootLayout({
   const bodyClassName = `flex flex-col h-screen ${
     hideNavAndFooter ? "" : "py-5 px-28"
   }`;
+
+  const toggleSearch = () => {
+    setShowSearch((prevState) => !prevState)
+  }
 
   return (
     <html lang="en">
@@ -66,7 +73,9 @@ export default function RootLayout({
                 </li>
               </ul>
               <div className="flex items-center gap-4">
-                <FiSearch className="cursor-pointer" />
+                <Link href="/collection">
+                <FiSearch className="cursor-pointer" onClick={toggleSearch}/>
+                </Link>
 
                 <Link href="/login">
                   <FaRegUser className="cursor-pointer" />
