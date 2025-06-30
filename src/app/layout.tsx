@@ -22,7 +22,11 @@ export default function RootLayout({
   const hideNavAndFooter =
     pathname.startsWith("/admin-login") || pathname.startsWith("/dashboard");
 
+
   const [showSearch, setShowSearch] = useState(false);
+
+const openSearch = () => setShowSearch(true);
+const closeSearch = () => setShowSearch(false);
 
   const toggleSearch = () => setShowSearch((prev) => !prev);
 
@@ -64,7 +68,7 @@ export default function RootLayout({
                 </li>
               </ul>
               <div className="flex items-center gap-4">
-                <FiSearch className="cursor-pointer" onClick={toggleSearch} />
+                <FiSearch className="cursor-pointer" onClick={openSearch} />
                 <Link href="/login">
                   <FaRegUser />
                 </Link>
@@ -73,17 +77,9 @@ export default function RootLayout({
                 </Link>
               </div>
             </div>
+            {showSearch && <Search onClose={closeSearch} />}
 
-            {showSearch && <Search onClose={toggleSearch} />}
 
-            {/* {pathname === "/collection" && (
-              <FiSearch
-                className="cursor-pointer"
-                onClick={() => setShowSearch(true)} // not toggleSearch
-              />
-            )} */}
-
-            {/* {showSearch && pathname === "/collection" && <Search />} */}
           </>
         )}
 
