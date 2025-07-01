@@ -22,6 +22,17 @@ export default function RootLayout({
   const hideNavAndFooter =
     pathname.startsWith("/admin-login") || pathname.startsWith("/dashboard");
 
+    const hideSearch =
+    pathname === "/" || // 👈 hide search on home page
+    pathname.startsWith("/admin-login") ||
+    pathname.startsWith("/dashboard") ||
+    pathname.startsWith("/about") ||
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/cart") ||
+    pathname.startsWith("/contact");
+  
+
+
 
   const [showSearch, setShowSearch] = useState(false);
 
@@ -68,7 +79,9 @@ const closeSearch = () => setShowSearch(false);
                 </li>
               </ul>
               <div className="flex items-center gap-4">
+                <Link href="/collection">
                 <FiSearch className="cursor-pointer" onClick={openSearch} />
+                </Link>
                 <Link href="/login">
                   <FaRegUser />
                 </Link>
@@ -77,7 +90,8 @@ const closeSearch = () => setShowSearch(false);
                 </Link>
               </div>
             </div>
-            {showSearch && <Search onClose={closeSearch} />}
+            {showSearch && !hideSearch && <Search onClose={closeSearch} />}
+
 
 
           </>
