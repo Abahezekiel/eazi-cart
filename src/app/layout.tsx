@@ -22,7 +22,7 @@ export default function RootLayout({
   const hideNavAndFooter =
     pathname.startsWith("/admin-login") || pathname.startsWith("/dashboard");
 
-    const hideSearch =
+  const hideSearch =
     pathname === "/" || // 👈 hide search on home page
     pathname.startsWith("/admin-login") ||
     pathname.startsWith("/dashboard") ||
@@ -30,14 +30,11 @@ export default function RootLayout({
     pathname.startsWith("/login") ||
     pathname.startsWith("/cart") ||
     pathname.startsWith("/contact");
-  
-
-
 
   const [showSearch, setShowSearch] = useState(false);
 
-const openSearch = () => setShowSearch(true);
-const closeSearch = () => setShowSearch(false);
+  const openSearch = () => setShowSearch(true);
+  const closeSearch = () => setShowSearch(false);
 
   const toggleSearch = () => setShowSearch((prev) => !prev);
 
@@ -55,16 +52,50 @@ const closeSearch = () => setShowSearch(false);
               <Image src={screenshot} alt="Logo" width={100} height={100} />
               <ul className="flex gap-5 items-center justify-center text-sm">
                 <li>
-                  <Link href="/">HOME</Link>
+                  <Link
+                    href="/"
+                    className={`pb-1 border-b-2 ${
+                      pathname === "/" ? "border-black" : "border-transparent"
+                    } transition duration-200 `}
+                  >
+                    HOME
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/collection">COLLECTION</Link>
+                  <Link
+                    href="/collection"
+                    className={`pb-1 border-b-2 ${
+                      pathname === "/collection"
+                        ? "border-black"
+                        : "border-transparent"
+                    } transition duration-200 `}
+                  >
+                    COLLECTION
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about">ABOUT</Link>
+                  <Link
+                    href="/about"
+                    className={`pb-1 border-b-2 ${
+                      pathname === "/about"
+                        ? "border-black"
+                        : "border-transparent"
+                    } transition duration-200 `}
+                  >
+                    ABOUT
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/contact">CONTACT</Link>
+                  <Link
+                    href="/contact"
+                    className={`pb-1 border-b-2 ${
+                      pathname === "/contact"
+                        ? "border-black "
+                        : "border-transparent "
+                    } transition duration-200  `}
+                  >
+                    CONTACT
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -80,7 +111,7 @@ const closeSearch = () => setShowSearch(false);
               </ul>
               <div className="flex items-center gap-4">
                 <Link href="/collection">
-                <FiSearch className="cursor-pointer" onClick={openSearch} />
+                  <FiSearch className="cursor-pointer" onClick={openSearch} />
                 </Link>
                 <Link href="/login">
                   <FaRegUser />
@@ -91,9 +122,6 @@ const closeSearch = () => setShowSearch(false);
               </div>
             </div>
             {showSearch && !hideSearch && <Search onClose={closeSearch} />}
-
-
-
           </>
         )}
 
