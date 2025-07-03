@@ -11,6 +11,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
 import "./globals.css";
 import Search from "./search/page";
+import { CiUser } from "react-icons/ci";
 // import Search from "./components/Search"; // Move Search component to components
 
 export default function RootLayout({
@@ -109,16 +110,23 @@ export default function RootLayout({
                   </a>
                 </li>
               </ul>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 relative">
                 <Link href="/collection">
-                  <FiSearch className="cursor-pointer" onClick={openSearch} />
+                  <FiSearch
+                    className="w-6 h-6 text-[#323232] cursor-pointer"
+                    onClick={openSearch}
+                  />
                 </Link>
                 <Link href="/login">
-                  <FaRegUser />
+                  <FaRegUser className="w-6 h-6 text-[#323232]" />
+                  {/* <CiUser className="w-6 h-6 text-[#323232]" /> */}
                 </Link>
                 <Link href="/cart">
-                  <HiOutlineShoppingBag />
+                  <HiOutlineShoppingBag className="w-6 h-6 text-[#323232]" />
                 </Link>
+                <p className=" bg-black text-white w-4 h-4 text-[8px] text-xs rounded-full flex items-center justify-center absolute right-[-3px] bottom-[-3px] font-extralight">
+                  0
+                </p>
               </div>
             </div>
             {showSearch && !hideSearch && <Search onClose={closeSearch} />}
