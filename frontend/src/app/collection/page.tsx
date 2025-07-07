@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Search from "../search/page";
+import Link from "next/link";
 
 export default function Collection() {
   return (
@@ -551,15 +552,17 @@ export default function Collection() {
                 <span>$38</span>
               </div>
             </div>
-            <div className="">
+          <Link href="/product-page">
+          <div className="">
               <div className="w-44  ">
                 <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img2_1.png" />
               </div>
               <div className="text-sm mt-3">
                 <p>Kid Tapered Slim Fit Trouser</p>
-                <span>$38</span>
+                <span>$388</span>
               </div>
             </div>
+          </Link>
           </div>
         </div>
       </div>
